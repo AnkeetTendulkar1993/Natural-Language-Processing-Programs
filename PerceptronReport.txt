@@ -1,0 +1,73 @@
+Assignment 2 Report
+
+Name: Ankeet Tendulkar
+
+Part I.
+
+1. Performance of standard perceptron on the development data with 100% of the training data
+1a. spam precision: 0.9898491083676269
+1b. spam recall: 0.9817687074829932 
+1c. spam F1 score: 0.9857923497267759 
+1d. ham precision: 0.9562091503267974
+1e. ham recall: 0.9753333333333334 
+1f. ham F1 score: 0.9656765676567657
+
+2. Performance of averaged perceptron on the development data with 100% of the training data
+2a. spam precision: 0.9849972722313148
+2b. spam recall: 0.9825850340136054 
+2c. spam F1 score: 0.9837896744312764 
+2d. ham precision: 0.9575878064943671
+2e. ham recall: 0.9633333333333334 
+2f. ham F1 score: 0.9604519774011301
+
+Part II.
+
+3. Performance of standard perceptron on the development data with 10% of the training data
+3a. spam precision: 0.9729653618698958
+3b. spam recall: 0.9401360544217687 
+3c. spam F1 score: 0.9562690285081651 
+3d. ham precision: 0.8645320197044335
+3e. ham recall: 0.936 
+3f. ham F1 score: 0.8988476312419975
+
+4. Performance of averaged perceptron on the development data with 10% of the training data
+4a. spam precision: 0.9583218327353022
+4b. spam recall: 0.9447619047619048 
+4c. spam F1 score: 0.9514935598794191 
+4d. ham precision: 0.8692010309278351
+4e. ham recall: 0.8993333333333333 
+4f. ham F1 score: 0.8840104849279161
+
+Part III. You are welcome to reuse code you wrote for assignment 1,
+but we would like to know how you handled the following tasks.
+
+5. How did you calculate precision, recall and F1 score? If you used a
+separate script, please give the name of the script and describe how
+to run it.
+The script to calculate the precision, recall and F1 score is given in the file "calculatePreRecallF1.py".
+The output file is used for this calculation. The name of the output file is passed as a commandline argument.
+If you wish to run the script you need to pass the name of the output file as an argument 
+It is accessed in the program using "sys.argv[1]". 
+The program runs using the output text file. It splits the label and the text filepath and further splits the text filepath 
+with either forward or backward slash in order to get the name of the folder in which the text file exists. It then 
+compares the label and the folder name to check if the file is correctly classified or not. The three values are 
+calculated using the following formulas - 
+(ck = spam or ham)
+precision - Number of files correctly classified as ck / Number of files classified as ck
+recall - Number of files correctly classified as ck / Number of files that belong in ck
+F1 - (2 * precision(ck) * recall(ck))/(precision(ck) + recall(ck))
+   
+
+6. How did you separate 10% of the training data? If you used a
+separate script, please give the name of the script and describe how
+to run it. Explain how you or your code choose the files.
+I separated 10% (1702 text files) of the data manually. I created a folder containing 851 spam and 851 ham
+text files. These 851 files for each spam and ham were selected in the following 
+order from the given train folder-  
+280 from folder 1 in train
+280 from folder 2 in train
+291 from folder 3 in train
+Thus we have equal number of spam and ham text files.
+Please note that the program still selects each of the files randomly in each iteration.
+
+

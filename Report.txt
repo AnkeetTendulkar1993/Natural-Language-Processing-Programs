@@ -1,0 +1,34 @@
+Assignment 1 Report
+
+Name:Ankeet Tendulkar
+
+1. Performance on the development data with 100% of the training data
+1a. spam precision: 0.9928156949433545
+1b. spam recall: 0.977687074829932
+1c. spam F1 score: 0.9851933095695091 
+1d. ham precision: 0.9473007712082262
+1e. ham recall: 0.9826666666666667 
+1f. ham F1 score: 0.9646596858638744
+
+2. Performance on the development data with 10% of the training data
+2a. spam precision: 0.9890680513801585
+2b. spam recall: 0.9847619047619047 
+2c. spam F1 score: 0.986910280883556 
+2d. ham precision: 0.9630606860158312
+2e. ham recall: 0.9733333333333334 
+2f. ham F1 score: 0.9681697612732096
+
+3. Description of enhancement(s) you tried (e.g., different approach(es) to smoothing, treating common words differently, dealing with unknown words differently):
+Punctuation marks cannot tell much about an email being a spam or a ham. 
+That is the reason I decided not to consider any of the punctuation marks while calculating any 
+of the probabilities and hence did not store them in the data dictionary. 
+Also common words like 'and', 'a', 'the', etc. donot tell much about the kind of the email and 
+so I did not consider them as well. The code for this part is written in the file 'learnTask3.py'.  
+
+4. Best performance results based on enhancements. Note that these could be the same or worse than the standard implementation.
+4a. spam precision: 0.9961432506887052
+4b. spam recall: 0.9839455782312925 
+4c. spam F1 score: 0.9900068446269678 
+4d. ham precision: 0.9618122977346278
+4e. ham recall: 0.9906666666666667 
+4f. ham F1 score: 0.9760262725779967

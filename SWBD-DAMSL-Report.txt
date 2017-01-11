@@ -1,0 +1,30 @@
+Assignment 3 Report
+
+Name: Ankeet Tendulkar
+
+1. If you included files other than baseline_crf.py, advanced_crf.py, evaluate_model.py, and hw3_corpus_tool.py, or modified hw3_corpus_tool.py please describe what the files do and/or your modifications to hw3_corpus_tool.py.
+
+I have used the contents of the "get_data" function in my "baseline_crf.py" and "advanced_crf.py" programs so that I can keep a track of the file names while traversing through the files. I have given it the name "iterateThroughAllFiles(path)". I have given a call to the "get_utterances_from_filename" function in "hw3_corpus_tool.py" from the "iterateThroughAllFiles(path)" function defined in my baseline and advanced program. 
+
+
+2. Describe how you evaluated your baseline and advanced features
+
+I manually separated 25% of the data i.e. 269 csv files and used them for development and stored it in a separate folder. I used the remaining 75% i.e. 807 csv files for training both my baseline and advanced models. I calculated the accuracy for both the baseline and the advanced features using the "evaluate_model.py" program that I wrote.
+
+
+3. Describe your advanced feature set.
+
+I have made use of bigrams as an extra feature for the advanced feature set. It was the feature that was giving me higher accuracy. Bigrams are formed by merging two words in a given sentence at a time. For eg. "How are you" will have bigram features as ["How_are","are_you"]  
+
+
+4. If you tried alternate advanced feature sets, please describe them.
+
+I tried out having a feature to identify utterances which were questions (consisting of Wh- words). But it was not giving much improvement in the accuracy. I also tried trigrams but again the accuracy was less. I tried a feature for acknowledgement utterances. But even that gave a low accuracy.
+
+
+(The following values of accuracy are calculated for 25% of development data with 75% training data as described above)
+
+5. Accuracy of baseline features was: 72.0683467270032 % (Number of correct labels = 36948/51268)
+
+6. Accuracy of advanced features was: 72.9792463134899 % (Number of correct labels = 37415/51268)
+
